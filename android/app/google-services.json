@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "686725309708",
+    "firebase_url": "https://frulight-4351f.firebaseio.com",
+    "project_id": "frulight-4351f",
+    "storage_bucket": "frulight-4351f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686725309708:android:338b9117a73e90b81b9529",
+        "android_client_info": {
+          "package_name": "com.example.fru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686725309708-2gdv6hicgklbcg3bgk7rrnsuo41bb0fn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB79UnJcsF_6FEvCAjD48zNjRshm0MrOlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686725309708-2gdv6hicgklbcg3bgk7rrnsuo41bb0fn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
