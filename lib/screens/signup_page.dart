@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fru/screens/home_page.dart';
-import 'package:fru/screens/login.dart';
+import 'package:fru/screens/login_page.dart';
 import 'package:fru/services/auth.dart';
 
 class Signup extends StatefulWidget {
@@ -37,7 +37,7 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: _isLoading
+      body:_isLoading
           ? Container(
         child: Center(
           child: CircularProgressIndicator(),
@@ -80,7 +80,7 @@ class _SignupState extends State<Signup> {
                           ),
                         )
                     ),
-                    validator: (val) => validateEmail(email)
+                    validator: (val) => validateEmail(val)
                         ? null
                         : "Enter correct email",
                     onChanged: (val) {
@@ -114,40 +114,38 @@ class _SignupState extends State<Signup> {
                     },
                   ),
                   SizedBox(height: 30,),
-                    Container(
-                      height: 50,
-                      child: GestureDetector(
-                        onTap: () {
-                          signUp();
+                  Container(
+                    height: 50,
+                      child: FlatButton(
+                        onPressed: (){
+                            return signUp();
                         },
-                        child: FlatButton(
-                          onPressed: (){},
-                          padding: EdgeInsets.all(0),
-                          child: Ink(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin:Alignment.centerLeft,
-                                end: Alignment.centerRight,
-                                colors: [
-                                  Color(0xffff5f6d),
-                                  Color(0xffff5f6d),
-                                  Color(0xffffc371),
-                                ],
-                              ),
-                              borderRadius: BorderRadius.circular(6),
+                        padding: EdgeInsets.all(0),
+                        child: Ink(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin:Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color(0xffff5f6d),
+                                Color(0xffff5f6d),
+                                Color(0xffffc371),
+                              ],
                             ),
-                              child: Container(
-                                alignment: Alignment.center,
-                                constraints: BoxConstraints(minHeight: 50,maxWidth: double.infinity),
-                                child: Text("Sign Up",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,),
-                              ),
-                            ),
-                          shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6),
                           ),
+                          child: Container(
+                            alignment: Alignment.center,
+                            constraints: BoxConstraints(minHeight: 50,maxWidth: double.infinity),
+                            child: Text("Sign Up",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,),
+                          ),
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
-                    ),
+
+                  ),
 
                   SizedBox(height: 30,)
                 ],
