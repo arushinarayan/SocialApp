@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fru/screens/home_page.dart';
-import 'package:fru/screens/signup.dart';
+import 'package:fru/screens/signup_page.dart';
 import 'package:fru/services/auth.dart';
 
 class Login extends StatefulWidget {
@@ -10,7 +10,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
   final _formKey = GlobalKey<FormState>();
   String email, password;
   AuthService authService = new AuthService();
@@ -40,13 +39,13 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: _isLoading
-          ? Container(
-        child: Center(
-          child: CircularProgressIndicator(),
-        ),
-      )
-          : Form(
-        key: _formKey,
+    ? Container(
+    child: Center(
+    child: CircularProgressIndicator(),
+    ),
+    )
+        : Form(
+    key: _formKey,
         child: Container(
           padding: EdgeInsets.only(left: 16,right: 16),
           child: Column(
@@ -121,15 +120,13 @@ class _LoginState extends State<Login> {
                     child: Text("Forgot Password", style: TextStyle(fontStyle: FontStyle.italic, fontWeight: FontWeight.bold, color: Colors.black87, decoration: TextDecoration.underline),),
                   ),
                   SizedBox(height: 20,),
-                  GestureDetector(
-                    onTap: () {
-                      signIn();
-                    },
-                    child: Container(
+                   Container(
                       height: 50,
                       width: double.infinity,
                       child: FlatButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          return signIn();
+                        },
                         padding: EdgeInsets.all(0),
                         child: Ink(
                           decoration: BoxDecoration(
@@ -144,18 +141,18 @@ class _LoginState extends State<Login> {
                               ],
                             ),
                           ),
-                            child: Container(
-                              alignment: Alignment.center,
-                              constraints: BoxConstraints(maxWidth: 300,maxHeight: 50),
-                              child: Text("Log In",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,),
-                            ),
+                          child: Container(
+                            alignment: Alignment.center,
+                            constraints: BoxConstraints(maxWidth: 300,maxHeight: 50),
+                            child: Text("Log In",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,),
+                          ),
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                     ),
-                  ),
+
                   SizedBox(height: 30,)
                 ],
               ),
