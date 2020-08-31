@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
               Column(
                 children: <Widget>[
                   SizedBox(height: 16,),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                         labelText: "Username",
                         labelStyle:
@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                   SizedBox(
                     height: 16,
                   ),
-                  TextField(
+                  TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
                         labelText: "Password",
