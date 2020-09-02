@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fru/screens/login.dart';
+import 'package:fru/services/auth.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: AuthService().handleAuth(),
       debugShowCheckedModeBanner: false,
     );
   }
