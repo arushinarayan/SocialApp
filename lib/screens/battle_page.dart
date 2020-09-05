@@ -10,7 +10,8 @@ class _BattlePageState extends State<BattlePage> {
     return Scaffold(
       body: Container(
         width: 400,
-        height: 400,
+        height: 500,
+        padding: EdgeInsets.only(top: 80),
         
         child: Column(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
